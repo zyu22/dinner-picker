@@ -157,13 +157,14 @@ body {
   align-items: center;
   gap: 3px;
   font-family: 'DosSammul', sans-serif;
-  font-size: 9.5px;
-  color: var(--brown);
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
   box-shadow: 2px 2px 0 var(--brown-light);
 }
 .cat-btn:hover { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 var(--brown); border-color: var(--brown); }
-.cat-btn.active { background: var(--red); color: white; border-color: var(--brown); box-shadow: 2px 2px 0 var(--brown); transform: translate(1px,1px); }
-.cat-btn .cat-emoji { font-size: 18px; font-family: 'Mona12 Text KR', 'Mona12', sans-serif; }
+.cat-btn.active { background: var(--red); color: #000; border-color: var(--brown); box-shadow: 2px 2px 0 var(--brown); transform: translate(1px,1px); }
+.cat-btn .cat-emoji { font-size: 22px; font-family: 'Mona12 Text KR', 'Mona12', sans-serif; }
 
 
 /* 메뉴 */
@@ -188,13 +189,14 @@ body {
   align-items: center;
   gap: 8px;
   font-family: 'DosSammul', sans-serif;
-  font-size: 9.5px;
-  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
   box-shadow: 2px 2px 0 #c8b89a;
 }
 .menu-item:hover { border-color: var(--brown); box-shadow: 2px 2px 0 var(--brown); transform: translate(-1px,-1px); }
-.menu-item.selected { background: var(--yellow); border-color: var(--brown); box-shadow: 2px 2px 0 var(--brown); font-weight: 600; transform: translate(1px,1px); }
-.menu-item .item-emoji { font-size: 20px; flex-shrink: 0; font-family: 'Mona12 Text KR', 'Mona12', sans-serif; }
+.menu-item.selected { background: var(--yellow); border-color: var(--brown); box-shadow: 2px 2px 0 var(--brown); font-weight: 700; transform: translate(1px,1px); }
+.menu-item .item-emoji { font-size: 24px; flex-shrink: 0; font-family: 'Mona12 Text KR', 'Mona12', sans-serif; }
 
 /* 버튼 */
 .action-row {
@@ -414,7 +416,7 @@ hr.dash { border: none; border-top: 2px dashed #bbb; margin: 10px 0; }
 
 <div class="container">
 
-  <div class="title-card">
+  <div class="title-card" id="title-card">
     <div class="title-main">오늘의 저녁은?!</div>
     <div class="title-sub">✦ DINNER PICKER ✦</div>
   </div>
@@ -713,6 +715,7 @@ function showReceipt(method) {
   document.getElementById('r-short').textContent = formatName(selectedItem.name);
   document.getElementById('r-barcode').textContent = orderNum;
 
+  document.getElementById('title-card').classList.add('hidden');
   document.getElementById('picker-section').classList.add('hidden');
   const scene = document.getElementById('receipt-scene');
   scene.classList.add('show');
@@ -722,6 +725,7 @@ function showReceipt(method) {
 function resetAll() {
   selectedItem = null;
   document.getElementById('receipt-scene').classList.remove('show');
+  document.getElementById('title-card').classList.remove('hidden');
   document.getElementById('picker-section').classList.remove('hidden');
   renderMenus();
   window.scrollTo({top:0,behavior:'smooth'});
