@@ -45,7 +45,7 @@
   --check: 28px;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; color: #000; }
 
 body {
   min-height: 100vh;
@@ -97,14 +97,14 @@ body {
 .title-main {
   font-family: 'DosSammul', sans-serif;
   font-size: 46px;
-  color: var(--brown);
+  color: #000;
   line-height: 1.1;
   margin-top: 6px;
 }
 .title-sub {
   font-family: 'DosSammul', sans-serif;
   font-size: 10px;
-  color: var(--brown-light);
+  color: #000;
   letter-spacing: 3px;
   margin-top: 6px;
 }
@@ -125,7 +125,7 @@ body {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2.5px;
-  color: var(--brown-light);
+  color: #000;
   text-transform: uppercase;
   margin-bottom: 12px;
   display: flex;
@@ -162,8 +162,8 @@ body {
   color: #000;
   box-shadow: 2px 2px 0 var(--brown-light);
 }
-.cat-btn:hover { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 var(--brown); border-color: var(--brown); }
-.cat-btn.active { background: var(--red); color: #000; border-color: var(--brown); box-shadow: 2px 2px 0 var(--brown); transform: translate(1px,1px); }
+.cat-btn:hover { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 var(--brown); border-color: #000; }
+.cat-btn.active { background: var(--red); color: #000; border-color: #000; box-shadow: 2px 2px 0 var(--brown); transform: translate(1px,1px); }
 .cat-btn .cat-emoji { font-size: 22px; font-family: 'Mona12 Text KR', 'Mona12', sans-serif; }
 
 
@@ -194,8 +194,8 @@ body {
   color: #000;
   box-shadow: 2px 2px 0 #c8b89a;
 }
-.menu-item:hover { border-color: var(--brown); box-shadow: 2px 2px 0 var(--brown); transform: translate(-1px,-1px); }
-.menu-item.selected { background: var(--yellow); border-color: var(--brown); box-shadow: 2px 2px 0 var(--brown); font-weight: 700; transform: translate(1px,1px); }
+.menu-item:hover { border-color: #000; box-shadow: 2px 2px 0 var(--brown); transform: translate(-1px,-1px); }
+.menu-item.selected { background: var(--yellow); border-color: #000; box-shadow: 2px 2px 0 var(--brown); font-weight: 700; transform: translate(1px,1px); }
 .menu-item .item-emoji { font-size: 24px; flex-shrink: 0; font-family: 'Mona12 Text KR', 'Mona12', sans-serif; }
 
 /* 버튼 */
@@ -270,7 +270,7 @@ body {
   padding: 4px 10px;
   font-family: 'DosSammul', sans-serif;
   font-size: 20px;
-  color: var(--red);
+  color: #000;
   opacity: 0.55;
   pointer-events: none;
 }
@@ -278,14 +278,14 @@ body {
 .receipt-store {
   font-family: 'DosSammul', sans-serif;
   font-size: 44px;
-  color: var(--brown);
+  color: #000;
   text-align: center;
   line-height: 1;
 }
 .receipt-tagline {
   font-family: 'DosSammul', sans-serif;
   font-size: 9.5px;
-  color: #aaa;
+  color: #000;
   letter-spacing: 2px;
   text-align: center;
   margin-top: 3px;
@@ -297,7 +297,7 @@ hr.dash { border: none; border-top: 2px dashed #bbb; margin: 10px 0; }
 .receipt-meta {
   font-family: 'DosSammul', sans-serif;
   font-size: 9.5px;
-  color: #777;
+  color: #000;
   line-height: 2;
 }
 .row { display: flex; justify-content: space-between; align-items: center; }
@@ -324,7 +324,7 @@ hr.dash { border: none; border-top: 2px dashed #bbb; margin: 10px 0; }
 .dish-name {
   font-family: 'DosSammul', sans-serif;
   font-size: 44px;
-  color: var(--brown);
+  color: #000;
   animation: popBounce 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.25s both;
 }
 .dish-badge {
@@ -346,7 +346,7 @@ hr.dash { border: none; border-top: 2px dashed #bbb; margin: 10px 0; }
   align-items: center;
   font-family: 'DosSammul', sans-serif;
   font-size: 22px;
-  color: var(--brown);
+  color: #000;
   margin: 4px 0;
 }
 
@@ -354,7 +354,7 @@ hr.dash { border: none; border-top: 2px dashed #bbb; margin: 10px 0; }
   text-align: center;
   font-family: 'DosSammul', sans-serif;
   font-size: 9.5px;
-  color: #bbb;
+  color: #000;
   letter-spacing: 1px;
   line-height: 2.2;
   margin-top: 8px;
@@ -365,17 +365,35 @@ hr.dash { border: none; border-top: 2px dashed #bbb; margin: 10px 0; }
   font-family: 'Space Mono', monospace;
   font-size: 28px;
   letter-spacing: -3px;
-  color: var(--ink);
+  color: #000;
   display: block;
   white-space: nowrap;
 }
 .barcode-num {
   font-family: 'DosSammul', sans-serif;
   font-size: 8px;
-  color: #bbb;
+  color: #000;
   letter-spacing: 4px;
   margin-top: 2px;
 }
+
+.btn-kakao {
+  width: 100%;
+  margin-top: 10px;
+  background: #FEE500;
+  border: 2.5px solid #000;
+  border-radius: 12px;
+  padding: 14px;
+  font-family: 'DosSammul', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #000;
+  transition: all 0.15s;
+}
+.btn-kakao:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 #000; }
+.btn-kakao:active { transform: translate(2px,2px); box-shadow: 2px 2px 0 #000; }
 
 .btn-reset {
   width: 100%;
@@ -386,18 +404,18 @@ hr.dash { border: none; border-top: 2px dashed #bbb; margin: 10px 0; }
   padding: 14px;
   font-family: 'DosSammul', sans-serif;
   font-size: 14px;
-  color: var(--brown-light);
+  color: #000;
   cursor: pointer;
   transition: all 0.2s;
 }
-.btn-reset:hover { border-color: var(--brown); color: var(--brown); background: var(--cream-dark); }
+.btn-reset:hover { border-color: #000; color: #000; background: var(--cream-dark); }
 
 .footer-deco {
   text-align: center;
   margin-top: 32px;
   font-family: 'DosSammul', sans-serif;
   font-size: 9.5px;
-  color: rgba(92,45,30,0.3);
+  color: #000;
   letter-spacing: 2px;
 }
 
@@ -417,7 +435,7 @@ hr.dash { border: none; border-top: 2px dashed #bbb; margin: 10px 0; }
 <div class="container">
 
   <div class="title-card" id="title-card">
-    <div class="title-main">오늘의<br>저녁은?!</div>
+    <div class="title-main">오늘의 저녁은?!</div>
     <div class="title-sub">✦ DINNER PICKER ✦</div>
   </div>
 
@@ -499,12 +517,48 @@ hr.dash { border: none; border-top: 2px dashed #bbb; margin: 10px 0; }
     </div>
 
     <button class="btn-reset" onclick="resetAll()">↩ 다시 고르기</button>
+    <button class="btn-kakao" id="btn-kakao" onclick="shareKakao()">
+      <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_small.png" style="width:20px;vertical-align:middle;margin-right:6px;">
+      카카오톡으로 공유하기
+    </button>
   </div>
 
   <div class="footer-deco">🍽️ ✦ MADE WITH LOVE ✦ 🍽️</div>
 </div>
 
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" crossorigin="anonymous"></script>
 <script>
+window.addEventListener('load', function() {
+  Kakao.init('ea00f46204723f635dae9b4377e54706');
+});
+
+function shareKakao() {
+  const name = selectedItem ? selectedItem.name : '오늘의 저녁';
+  const emoji = selectedItem ? selectedItem.emoji : '🍽️';
+  const category = selectedItem ? selectedItem.category : '';
+
+  Kakao.Share.sendDefault({
+    objectType: 'feed',
+    content: {
+      title: `오늘의 저녁은?! ${emoji}`,
+      description: `오늘 저녁은 [${category}] ${name} 어때요?`,
+      imageUrl: 'https://zyu22.github.io/dinner-picker/thumbnail.png',
+      link: {
+        mobileWebUrl: 'https://zyu22.github.io/dinner-picker/',
+        webUrl: 'https://zyu22.github.io/dinner-picker/',
+      },
+    },
+    buttons: [
+      {
+        title: '나도 골라보기',
+        link: {
+          mobileWebUrl: 'https://zyu22.github.io/dinner-picker/',
+          webUrl: 'https://zyu22.github.io/dinner-picker/',
+        },
+      },
+    ],
+  });
+}
 const SHEET_CSV_URL = '';
 
 const DEFAULT_MENUS = [
